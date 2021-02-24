@@ -8,6 +8,6 @@ Install [Tensorflow](https://www.tensorflow.org/install/). The code is tested un
 The data sets we use are ShapeNet and Pix3D. The script commands used for training and testing are as follows:
 * Run the training script:  
 ``` python train.py xxxxxxx ```
-* Run the evaluation script after training finished:  
+* Run the testing script after training finished:  
 ``` python test.py xxxxxxx ```
 
