@@ -43,6 +43,7 @@ def dump_image_point():
         test_models_dict = json.load(f)
 
     cats = shapenet_category_to_id.values()
+    #就是那一串数字
     for cat in cats:
         print(cat, 'starts at ', time.strftime("%m-%d %H:%M:%S", time.localtime()))
         print(cat, 'loading train_split!')
