@@ -53,15 +53,16 @@ def dump_image_point():
         train_img_path = []
         train_pt_path = []
         train_image_models.extend([os.path.join(data_prefix, image_input_folder, model) for model in train_models_dict[cat]])
+        #train_image_models保存了数据集的路径
         for each in train_image_models:
             for index in range(image_number):
                 train_img_path.append(os.path.join(each, '{0:02d}.png'.format(int(index))))
-        
+        #png
         train_point_models.extend([os.path.join(data_prefix, point_input_folder, model) for model in train_models_dict[cat]])
         for each in train_point_models:
             for index in range(image_number):
                 train_pt_path.append(os.path.join(each, '{0:02d}.npy'.format(int(index))))
-                
+        #npy        
         print(cat, 'train_split loaded!')
 
         train_image_save = h5py.File(os.path.join(train_output_folder, image_output_folder, '{}.h5'.format(cat)), mode = 'w')
