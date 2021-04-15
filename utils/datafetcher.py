@@ -89,6 +89,7 @@ class DataFetcher(threading.Thread):
             for cat, batch in self.cats_batches.iteritems():
                 with h5py.File(os.path.join(self.image_path, '{}.h5'.format(cat)), 'r') as fi:
                     with h5py.File(os.path.join(self.point_path, '{}.h5'.format(cat)), 'r') as fp:
+			#把图像压缩为h5文件，一类压缩成一个h5
                         for i in range(0, batch * self.batch_size, self.batch_size):
                             if self.stopped:
                                 break 
