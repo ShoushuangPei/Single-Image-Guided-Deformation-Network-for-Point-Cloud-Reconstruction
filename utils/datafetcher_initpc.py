@@ -1,3 +1,4 @@
+#02691156.h5这样的文件，里面包含子类数据集的序列值
 import os
 import numpy as np
 import h5py
